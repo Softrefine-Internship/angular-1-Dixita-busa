@@ -1,0 +1,160 @@
+:host {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .user-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .user-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 0px 0px 0px;
+      
+      .user-avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 3px solid #ffffff;
+        overflow: hidden;
+        margin-top: -35px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        background-color: #f0f0f0;
+        color: #666;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: 600;
+        position: relative;
+        z-index: 2;
+      }
+      
+      .user-info {
+        text-align: center;
+        padding: 15px 20px 5px 20px;
+        width: 100%;
+        
+        .user-name {
+          font-size: 18px;
+          font-weight: 600;
+          margin: 0 0 5px 0;
+          color: #333;
+          font-family: 'Montserrat', sans-serif;
+        }
+  
+        .user-age {
+          font-size: 14px;
+          color: #555;
+          margin: 0 0 15px 0;
+          font-family: 'Montserrat', sans-serif;
+        }
+        
+        .user-email {
+          font-size: 14px;
+          color: #888;
+          margin: 0 0 15px 0;
+          font-family: 'Montserrat', sans-serif;
+        }
+      }
+      
+      .edit-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 14px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s ease;
+        z-index: 3;
+        
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+    
+    .user-details {
+      padding: 20px;
+      text-align: center;
+      
+      p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+      }
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      border-top: 1px solid #f0f0f0;
+      
+      .edit-button {
+         border-radius: 10%;
+         border: #000;
+      }
+  
+      a {
+        width: 70px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        transition: all 0.2s ease;
+        
+        &:hover {
+          background-color: #e0e0e0;
+          color: #555;
+        }
+      }
+    }
+  }
+  
+  :host {
+    --color1: #64e0b9;
+    --color2: #90b8f8;
+    --color3: #7c9df9;
+    --color4: #75cff8;
+    --color5: #8bc5e5;
+    --color6: #f9a5ce;
+    --color7: #ffc78e;
+    --color8: #fc9fb0;
+  }
+  
+  :host:nth-child(8n+1) { --current-color: var(--color1); }
+  :host:nth-child(8n+2) { --current-color: var(--color2); }
+  :host:nth-child(8n+3) { --current-color: var(--color3); }
+  :host:nth-child(8n+4) { --current-color: var(--color4); }
+  :host:nth-child(8n+5) { --current-color: var(--color5); }
+  :host:nth-child(8n+6) { --current-color: var(--color6); }
+  :host:nth-child(8n+7) { --current-color: var(--color7); }
+  :host:nth-child(8n+8) { --current-color: var(--color8); }
+  
+  .user-card .user-header,
+  .social-links .edit-button {
+    background-color: var(--current-color);
+  }
+  
+  

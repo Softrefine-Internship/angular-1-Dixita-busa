@@ -1,0 +1,22 @@
+<div class="user-card">
+    <div class="user-header">
+      <div class="user-avatar">
+        <img src="assets/profile.ico" alt="Profile" height="95px">
+      </div>
+      <div class="user-info">
+        <h3 class="user-name">{{ data.name }}</h3>
+        <p class="user-age">{{ data.age }} years</p>
+      </div>
+    </div>
+    
+    <div class="user-details">
+      <p>{{ data.email }}</p>
+      <p>Phone: {{ data.phoneno }}</p>
+    </div>
+    
+    <div class="social-links">
+      <button class="edit-button" (click)="editUser()">
+        <a>EDIT</a>
+      </button>
+    </div>
+  </div>
